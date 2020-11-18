@@ -1,11 +1,14 @@
 #BartenderBotV0
 #https://github.com/zsarnold
+#Drink file. Used to start drink and configure what drink.
 
 #import pump.py (Custom motor driver using a time)
 #call motor code for the pump within drink function
+import pump.py
 
 #import convey.py (Custom conveyor functions)
 #call stepper functions: homeConvey(0mm), fillConvey(150mm?), finalConvey(300mm?)
+import convey.py
 
 #given file
 drinkList = "files/drink.csv"
