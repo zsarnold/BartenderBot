@@ -1,0 +1,31 @@
+.main {
+  height: 320px;
+  width: 480px;
+  background-color: #D5D8DC;
+  position: relative;
+
+  }
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.myButton {
+  background-color: white;
+  height: 120px;
+  width: 120px;
+}
+
+.myButton:active {
+  background: rgb(109,170,109);
+}
+
+.drinkIMG {
+  height: 80px;
+  width: 120px:
+}

@@ -1,0 +1,49 @@
+https://github.com/dddomodossola/remi
+http://mattrichardson.com/Raspberry-Pi-Flask/
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+
+https://www.w3schools.com/howto/howto_css_icon_buttons.asp
+
+
+https://www.w3schools.com/css/css_grid.asp
+https://www.w3schools.com/howto/howto_css_three_columns.asp
+
+https://www.w3schools.com/howto/howto_css_button_group.asp
+
+
+https://pythonhow.com/html-templates-in-flask/
+https://stackoverflow.com/questions/11609376/share-data-between-html-pages
+https://www.codeproject.com/Questions/795191/Passing-JavaScript-data-values-between-HTML-pages
+
+
+<div class="main">
+  <a href="main.html">
+
+    <button class="myButton">Drink 1</button>
+  </a>
+</div>
+
+
+Button Notes:
+For the grayed out arrow buttons, use the .disabled within css
+  .disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>BartenderBotV0.1</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <div class="main">
+      <div class="center">
+        <div class="myButton">Let's Drink!</div>
+      </div>
+    </div>
+  </html>

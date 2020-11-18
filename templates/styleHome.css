@@ -1,0 +1,45 @@
+.main {
+  height: 320px;
+  width: 480px;
+  background-color: #D5D8DC;
+  position: relative;
+
+  }
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.myButton {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  line-height: 50px;
+  padding: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-position: normal;
+  text-transform: none;
+  background-image: linear-gradient(to right, #233329 0%, #63D471 100%);
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid rgb(0,0,0);
+  display: inline-block;
+}
+
+.myButton:active {
+  background: rgb(109,170,109);
+}
