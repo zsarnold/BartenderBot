@@ -1,0 +1,41 @@
+Part Name		V?	Tolerance?	Export?		GM?
+	
+HMI Mount		1	X		X		X - V1
+HMI Cover		2	X		X		
+HMI Case		2	X		X		
+Tube Holder		1	X		X		
+Pallet			1	X		X		
+Motor Mount		1	X		X		X - V1
+Motion Drive Block	2	X		X		X - V2
+Conveyor Track		2	X		X		X - V2
+
+
+Overall Notes:
+-Work in 3DP tolerance
+-Print the parts
+-Start programing
+
+Update Notes:
+-(DONE) Update Motor mount to fit 100mm spacing.
+-(DONE) Update upper tube holder to fit 100mm spacing across
+-(V1 DONE) Pump mount
+-Motor driver holder
+-(DONE) Pallet needs to fit 100mm spacing
+
+
+
+-HMI Case
+--(DONE)Extend rotate part further from part, bolt head interfers with cover bolt holds.
+--(DONE)Make hole for SD card. Will not fit in area with SD card installed.
+--(DONE)Make outer walls 2mm taller so screen fits
+--(DONE)Make power and i2c pin output.
+--Extend LCD Brace 1mm and create another on other corners
+--Pins dont fit
+--Extend it all to make easier to print
+
+-HMI Mount
+--Make hole for rotate larger. Too tight
+
+Update Archive:
+-Conveyor Track
+--(DONE)Remove bearing standoff. Replace with Washer. Allows to be printed on other face, reduce need of supports

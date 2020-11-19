@@ -1,0 +1,24 @@
+Install newest Raspberry Pi OS to SD card. Add 'ssh' file to enable SSH.
+-sudo apt-get update
+-sudo apt-get upgrade
+-sudo raspi-config		"Setup WiFi, expand filesystem"
+	
+
+
+LCD Driver Installation:
+-sudo rm -rf LCD-show
+-git clone https://github.com/goodtft/LCD-show.git
+-chmod -R 755 LCD-show
+-cd LCD-show/
+-sudo ./LCD35-show
+
+Touch Screen Calibration:
+-cd LCD-show/
+-sudo dpkg -i -B xinput-calibrator_0.7.5-1_armhf.deb
+
+Rotate Display:
+-sudo rm -rf LCD-show
+-git clone https://github.com/goodtft/LCD-show.git
+-chmod -R 755 LCD-show
+-cd LCD-show/
+-sudo ./XXX-show 90
