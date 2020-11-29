@@ -1,0 +1,13 @@
+Part Name               Seperate File?		Descrip:
+Pallet                  YES
+Motion Drive Block      YES
+Conveyor Track          YES
+Stepper Mount           YES
+Tube Holder		YES
+Pump Mount		YES
+Tube Comb		YES
+HMI Case		NO
+HMI Cover		NO
+HMI Mount		NO
+Electronics Enclosure	YES
+Electronics Cover	YES
