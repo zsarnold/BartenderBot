@@ -30,7 +30,7 @@ U 1 1 5FC60520
 P 1500 1150
 F 0 "J3" H 1650 1150 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 2000 1050 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1500 1150 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 1500 1150 50  0001 C CNN
 F 3 "~" H 1500 1150 50  0001 C CNN
 	1    1500 1150
 	1    0    0    -1  
@@ -52,7 +52,7 @@ U 1 1 5FC6A709
 P 1500 1650
 F 0 "J4" H 1650 1650 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 2000 1550 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1500 1650 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 1500 1650 50  0001 C CNN
 F 3 "~" H 1500 1650 50  0001 C CNN
 	1    1500 1650
 	1    0    0    -1  
@@ -63,7 +63,7 @@ U 1 1 5FC6AE87
 P 1500 2150
 F 0 "J5" H 1650 2150 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 2000 2050 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1500 2150 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 1500 2150 50  0001 C CNN
 F 3 "~" H 1500 2150 50  0001 C CNN
 	1    1500 2150
 	1    0    0    -1  
@@ -74,7 +74,7 @@ U 1 1 5FC6C712
 P 1500 2650
 F 0 "J6" H 1650 2650 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 2000 2550 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1500 2650 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 1500 2650 50  0001 C CNN
 F 3 "~" H 1500 2650 50  0001 C CNN
 	1    1500 2650
 	1    0    0    -1  
@@ -107,17 +107,6 @@ Wire Wire Line
 Wire Wire Line
 	1150 2850 1300 2850
 $Comp
-L Connector_Generic:Conn_01x04 J1
-U 1 1 5FC7B180
-P 3200 1050
-F 0 "J1" H 3280 1042 50  0000 L CNN
-F 1 "Conn_01x04" H 3280 951 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3200 1050 50  0001 C CNN
-F 3 "~" H 3200 1050 50  0001 C CNN
-	1    3200 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR01
 U 1 1 5FC7D76D
 P 2850 950
@@ -131,21 +120,16 @@ $EndComp
 $Comp
 L power:+12V #PWR05
 U 1 1 5FC7E27E
-P 2750 1250
-F 0 "#PWR05" H 2750 1100 50  0001 C CNN
-F 1 "+12V" H 2850 1350 50  0000 C CNN
-F 2 "" H 2750 1250 50  0001 C CNN
-F 3 "" H 2750 1250 50  0001 C CNN
-	1    2750 1250
-	1    0    0    -1  
+P 2850 1150
+F 0 "#PWR05" H 2850 1000 50  0001 C CNN
+F 1 "+12V" V 2950 1250 50  0000 C CNN
+F 2 "" H 2850 1150 50  0001 C CNN
+F 3 "" H 2850 1150 50  0001 C CNN
+	1    2850 1150
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3000 950  2850 950 
-Wire Wire Line
-	3000 1150 3000 1050
-Wire Wire Line
-	2750 1250 3000 1250
-Connection ~ 3000 1050
 $Comp
 L power:GND #PWR04
 U 1 1 5FC82AB4
@@ -264,7 +248,7 @@ StepA
 Text Label 1200 2650 2    50   ~ 0
 StepB
 Wire Notes Line
-	3800 1400 2450 1400
+	3850 1750 2500 1750
 Wire Notes Line
 	5900 750  5900 3600
 Wire Notes Line
@@ -355,4 +339,18 @@ Wire Wire Line
 	1250 1150 1300 1150
 Wire Notes Line
 	750  750  5900 750 
+Wire Wire Line
+	2850 1150 3000 1150
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5FC7B180
+P 3200 1050
+F 0 "J1" H 3280 1042 50  0000 L CNN
+F 1 "Conn_01x04" H 3280 951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3200 1050 50  0001 C CNN
+F 3 "~" H 3200 1050 50  0001 C CNN
+	1    3200 1050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3000 1250
 $EndSCHEMATC
