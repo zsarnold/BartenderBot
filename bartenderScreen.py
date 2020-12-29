@@ -11,6 +11,7 @@ green=(140,245,152)
 screen = pygame.display.set_mode((screenW,screenH))
 pygame.display.set_caption('Bartender Bot')
 screen.fill(bgColor)
+letsDrinkPic = pygame.image.load(r'C:\Users\Randy\BartenderBot\Files\LetsDrink.png') 
 pygame.display.update()
 clock = pygame.time.Clock()
 
@@ -19,6 +20,7 @@ def drawHome():
     screen.fill(bgColor)
     letsDrinkSize=[screenW/4,screenH/4,screenW/2,screenH/2]
     pygame.draw.rect(screen,green,letsDrinkSize)
+    screen.blit(letsDrinkPic, (120, 60)) 
     pygame.display.update()
 
 def letsDrinkClicked(mousePOS):
@@ -37,7 +39,6 @@ def drawDrinkSelection():
 #Generic function used to draw rectangles as needed
 def drawRectangle():
     pass
-    
     
 def main():
     homescreen = True
