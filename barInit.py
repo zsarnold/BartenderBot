@@ -1,6 +1,6 @@
 #BartenderBotV0
 #https://github.com/zsarnold
-#Pump file. Used to control pumps for certain time.
+#Test file. Used to control pumps for certain time.
 
 import smbus
 import time
@@ -9,24 +9,17 @@ import time
 bus = smbus.SMBus(1)
 
 DEVICE = 0x20
+IODIRA = 0x00
+OLATA  = 0x14
+GPIOA  = 0x12
 IODIRB = 0x01
 OLATB  = 0x15
 GPIOB  = 0x13
 
 #Set GPA pins to output
 bus.write_byte_data(DEVICE, IODIRB, 0x00)
+bus.write_byte_data(DEVICE, IODIRA, 0x00)
 
 #Set all ports to 0
 bus.write_byte_data(DEVICE, OLATB, 0)
-
-
-def pump( pumpNum, pumpTime ):
-    #set pump high
-    bus.write_byte_data(DEVICE, OLATB, pumpNum)
-    #wait the time
-    time.sleep(pumpTime)
-    #set pump low
-    bus.write_byte_data(DEVICE, OLATB, 0)
-
-
-pump( 1, 1)
+bus.write_byte_data(DEVICE, OLATA, 0)
