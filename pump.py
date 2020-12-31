@@ -27,6 +27,3 @@ def pump( pumpNum, pumpTime ):
     time.sleep(pumpTime)
     #set pump low
     bus.write_byte_data(DEVICE, OLATB, 0)
-
-
-pump( 1, 1)

@@ -1,9 +1,8 @@
 #BartenderBotV0
 #https://github.com/zsarnold
-#Test file. Used to control pumps for certain time.
+#Test file. Used to intialize I2C I/O expander at raspi boot.
 
 import smbus
-import time
 
 #I2C setup
 bus = smbus.SMBus(1)
