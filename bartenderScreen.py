@@ -13,7 +13,9 @@ red=(255,0,0)
 screen = pygame.display.set_mode((screenW,screenH))
 pygame.display.set_caption('Bartender Bot')
 screen.fill(bgColor)
+drinkTilePositions=[]
 letsDrinkPic = pygame.image.load(r'C:\Users\Randy\BartenderBot\Files\LetsDrink.png') 
+homeButtonPic = pygame.image.load(r'home.png') 
 pygame.display.update()
 clock = pygame.time.Clock()
 
@@ -37,17 +39,20 @@ def whatsClicked(mousePOS,screen):
             return False
     elif(screen=="Drinks"):
         #click test for lets drink button
-        if(mousePOS[0]>=220 and mousePOS[0]<=240):
-            if(mousePOS[1]>=280 and mousePOS[1]<=300):
+        if(mousePOS[0]>=210 and mousePOS[0]<=250):
+            if(mousePOS[1]>=270 and mousePOS[1]<=310):
                 return "HomeButton"
             else:
                 return False
         else:
             return False
+    else:
+        return False
 
 def drawDrinkSelection(availableDrinks):
     screen.fill(bgColor)
     drawRectangle(red,220,280,20,20)
+    screen.blit(homeButtonPic, (220, 280)) 
     pygame.display.update()
     for i in availableDrinks:
         print(i)
@@ -58,10 +63,12 @@ def drawRectangle(color,positionalWidth,positionalHeight,width,height):
     values=[positionalWidth,positionalHeight,width,height]
     pygame.draw.rect(screen,color,values)
     
+#Calls drinkDict.py to return dictionary of drink names as key and a tuple of time as the value
 def generateAvailableDrinks():
     drinkDictionary=drinkDict.main()
     return drinkDictionary
 
+#Main controlling function for the GUI
 def main():
     availableDrinks=generateAvailableDrinks()
     print(availableDrinks)
@@ -93,7 +100,8 @@ def main():
                 mousePOS = pygame.mouse.get_pos()
                 clicked=whatsClicked(mousePOS,currentScreen)
                 print(currentScreen)
-                print("Clicked=" + clicked)
+                tempPrint= "Clicked= " + str(clicked)
+                print(tempPrint)
 
                 #Checked for lets drink button click
                 if(currentScreen=="Home" and clicked=="Lets Drink"):
