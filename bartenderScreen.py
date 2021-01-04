@@ -13,8 +13,8 @@ red=(255,0,0)
 screen = pygame.display.set_mode((screenW,screenH))
 pygame.display.set_caption('Bartender Bot')
 screen.fill(bgColor)
-drinkTilePositions=[]
-letsDrinkPic = pygame.image.load(r'C:\Users\Randy\BartenderBot\Files\LetsDrink.png') 
+drinkTilePositions=[[30,30],[190,30],[350,30],[30,160],[190,160],[350,160]]
+letsDrinkPic = pygame.image.load(r'LetsDrink.png') 
 homeButtonPic = pygame.image.load(r'home.png') 
 pygame.display.update()
 clock = pygame.time.Clock()
@@ -33,33 +33,46 @@ def whatsClicked(mousePOS,screen):
         if(mousePOS[0]>=120 and mousePOS[0]<=360):
             if(mousePOS[1]>=85 and mousePOS[1]<=240):
                 return "Lets Drink"
-            else:
-                return False
-        else:
-            return False
+
     elif(screen=="Drinks"):
-        #click test for lets drink button
+        #click test for touch points on the drink selection page
         if(mousePOS[0]>=210 and mousePOS[0]<=250):
             if(mousePOS[1]>=270 and mousePOS[1]<=310):
                 return "HomeButton"
-            else:
-                return False
-        else:
-            return False
-    else:
-        return False
+        #click test for the 6 drink buttons
+        if(mousePOS[0]>=30 and mousePOS[0]<=130):
+            if(mousePOS[1]>=30 and mousePOS[1]<=130):
+                return "drink1"
+        if(mousePOS[0]>=190 and mousePOS[0]<=290):
+            if(mousePOS[1]>=30 and mousePOS[1]<=130):
+                return "drink2"
+        if(mousePOS[0]>=350 and mousePOS[0]<=450):
+            if(mousePOS[1]>=30 and mousePOS[1]<=130):
+                return "drink3"
+        if(mousePOS[0]>=30 and mousePOS[0]<=130):
+            if(mousePOS[1]>=160 and mousePOS[1]<=260):
+                return "drink4"
+        if(mousePOS[0]>=190 and mousePOS[0]<=290):
+            if(mousePOS[1]>=160 and mousePOS[1]<=260):
+                return "drink5"
+        if(mousePOS[0]>=350 and mousePOS[0]<=450):
+            if(mousePOS[1]>=160 and mousePOS[1]<=260):
+                return "drink6"
+    return "Empty Space -_-"
 
 def drawDrinkSelection(availableDrinks):
+    #For each drink in the dictionary draws a box using the coordinates stored in
+    #the drinkTilePositions list
     screen.fill(bgColor)
-    drawRectangle(red,220,280,20,20)
-    screen.blit(homeButtonPic, (220, 280)) 
-    pygame.display.update()
-    for i in availableDrinks:
-        print(i)
-        print(availableDrinks[i])
+    drawRectangle(red,230,280,20,20,"")
+    screen.blit(homeButtonPic, (225, 280)) 
+    for i in range(len(availableDrinks)):
+        drawRectangle(red,drinkTilePositions[i][0],drinkTilePositions[i][1],100,100,"test")
+
+    pygame.display.update()    
 
 #Generic function used to draw rectangles as needed
-def drawRectangle(color,positionalWidth,positionalHeight,width,height):
+def drawRectangle(color,positionalWidth,positionalHeight,width,height,txt):
     values=[positionalWidth,positionalHeight,width,height]
     pygame.draw.rect(screen,color,values)
     
